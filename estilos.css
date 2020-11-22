@@ -1,0 +1,127 @@
+:root{
+    --color-Red: hsl(0, 78%, 62%);
+    --color-Cyan: hsl(180, 62%, 55%);
+    --color-Orange: hsl(34, 97%, 64%);
+    --color-Blue: hsl(212, 86%, 64%);
+
+    --color-Very-Dark-Blue: hsl(234, 12%, 34%);
+    --color-Grayish-Blue: hsl(229, 6%, 66%);
+    --color-Very-Light-Gray: hsl(0, 0%, 98%);
+    --color-white:#ffffff;
+
+    --tamanio-letra: 15px;
+    --fuente: 'Poppins', sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-Very-Light-Gray);
+    font-family: var(--fuente);
+    font-size: var(--tamanio-letra);
+}
+.container{
+    max-width: 90rem;
+    margin: 0 auto;
+  
+}
+.titulo{
+   
+    width: 100%;
+    text-align: center; 
+}
+
+.titulo-fino, .titulo-doble{
+    margin: 0;
+}
+
+.titulo-fino{
+    padding-top: 5rem;
+    font-weight: 200;
+    color: var(--color-Grayish-Blue);
+}
+
+.titulo-doble{
+    color: var(--color-Very-Dark-Blue);
+}
+
+.titulo p{
+    color: var(--color-Grayish-Blue);
+    width: 33rem;
+    margin: 0 auto;
+     padding-bottom: 4rem;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* column-gap: 2rem; */
+
+}
+.card-individual{
+    /* border: 1px solid red; */
+    width: 25rem;
+    height: 15rem;
+    border-radius: .5rem;
+    border-top: .5rem solid var(--color-Cyan);
+    background-color: var(--color-white);
+    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.055);
+    margin: 0 auto;
+    align-self: center;
+}
+.card-individual h3{
+    color: var(--color-Very-Dark-Blue);
+    margin-left: 2rem;
+    margin-top: 2rem;
+
+}
+.card-individual p{
+    color: var(--color-Grayish-Blue);
+    /* margin-left: 2rem; */
+    margin: 0 2rem;
+}
+
+.card-individual .card-icon{
+    text-align: right;
+    margin: 2rem;
+}
+.card-team-builder{
+    border-top: .5rem solid var(--color-Red);
+}
+.card-karma{
+    border-top: .5rem solid var(--color-Orange);
+    margin-top: 2.5rem;
+}
+.card-calculator{
+    border-top: .5rem solid var(--color-Blue);
+
+}
+@media only screen and (max-width:1250px){
+    .card-individual{
+        /* border: 1px solid red; */
+        width: 23rem;
+    }
+}
+@media only screen and (max-width:1120px){
+    .card-individual{
+        /* border: 1px solid red; */
+        width: 21rem;
+    }
+}
+
+@media only screen and (max-width:1000px){
+    .card-individual{
+        /* border: 1px solid red; */
+        width: 24rem;
+        margin-bottom: 2.5rem;
+    }
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titulo p{
+        width: 23rem;
+        padding-bottom: 4rem;
+        text-align: justify;
+    }
+}
